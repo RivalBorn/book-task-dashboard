@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Book & Task Dashboard</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+  <script src="todo.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">Beginner JavaScript Portfolio Project</p>
+      <h1>Book & Task Dashboard</h1>
+      <p class="header-text">
+        Search for books, build a reading list, and manage study tasks in one simple dashboard.
+      </p>
+    </div>
+  </header>
+
+  <main class="app-layout">
+    <section class="card search-card" aria-labelledby="book-search-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Open Library API</p>
+          <h2 id="book-search-title">Book Search</h2>
+        </div>
+      </div>
+
+      <form id="book-search-form" class="search-form">
+        <label for="search-input">Search by title, author, or keyword</label>
+        <div class="input-row">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Example: JavaScript, Atomic Habits, finance"
+            autocomplete="off"
+          />
+          <button type="submit">Search</button>
+        </div>
+      </form>
+
+      <p id="book-status" class="status-message" aria-live="polite">
+        Enter a search term to find books.
+      </p>
+
+      <ul id="results" class="book-results"></ul>
+    </section>
+
+    <section class="card tasks-card" aria-labelledby="task-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Study Planner</p>
+          <h2 id="task-title">Task List</h2>
+        </div>
+        <p class="task-total">Tasks: <span id="task-count">0</span></p>
+      </div>
+
+      <form id="task-form" class="task-form">
+        <label for="new-task">Add a new task</label>
+        <div class="input-row">
+          <input
+            id="new-task"
+            type="text"
+            placeholder="Example: Practice DOM manipulation"
+            autocomplete="off"
+          />
+          <button type="submit">Add</button>
+        </div>
+      </form>
+
+      <ul id="task-list" class="task-list">
+        <li>
+          <span>Learn HTML structure</span>
+          <button type="button" class="delete-btn">Delete</button>
+        </li>
+        <li>
+          <span>Practice CSS layouts</span>
+          <button type="button" class="delete-btn">Delete</button>
+        </li>
+        <li>
+          <span>Build JavaScript projects</span>
+          <button type="button" class="delete-btn">Delete</button>
+        </li>
+      </ul>
+
+      <p class="helper-text">
+        Click a task to mark it complete. Use the delete button to remove it.
+      </p>
+    </section>
+
+    <section class="card about-card" aria-labelledby="about-title">
+      <p class="eyebrow">Project Skills</p>
+      <h2 id="about-title">What this project demonstrates</h2>
+
+      <ul class="skills-list">
+        <li>Semantic HTML structure</li>
+        <li>Responsive CSS layout</li>
+        <li>DOM manipulation</li>
+        <li>Event listeners</li>
+        <li>Fetch API with async/await</li>
+        <li>Basic error handling</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built by Cesar Torres · 2026</p>
+  </footer>
+</body>
+</html>
